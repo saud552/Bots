@@ -7,7 +7,7 @@ $start="
 ▪️ يمكنك تحويل الصيغ وتغيير حقوق ملفات Mp3 مع ميزة النشر التلقائي .
 ";}
 
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $message = $update->message;
 $from_id = $message->from->id;
 $chat_id = $message->chat->id;
@@ -38,7 +38,7 @@ $id = $message->from->id;
 $name = $message->from->first_name;
 $message_id2 = $update->callback_query->message->message_id;
 $data = $update->callback_query->data;
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $message = $update->message;
 $from_id = $message->from->id;
 $chat_id = $message->chat->id;
@@ -100,7 +100,7 @@ $message_id2 = $update->callback_query->message->message_id;
 $name = $message->from->first_name;
 $user = $message->from->username;
 $ybot= "YYYYi";
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $message = $update->message;
 $chat_id = $message->chat->id;
 $text = $message->text;

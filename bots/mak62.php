@@ -1,6 +1,6 @@
 <?php#*wataw*
 
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $re = $update->message->reply_to_message;
 $message = $update->message;
 $text = $message->text;

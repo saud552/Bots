@@ -1,6 +1,6 @@
 <?php#*wataw*
 
-$update   = json_decode(file_get_contents('php://input'));
+// $update   = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $message  = $update->message;
 $text     = $message->text;
 $message_id = $message->message_id;
@@ -76,7 +76,7 @@ $id = $message->from->id;
 $name = $message->from->first_name;
 $message_id2 = $update->callback_query->message->message_id;
 $data = $update->callback_query->data;
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $message = $update->message;
 $from_id = $message->from->id;
 $chat_id = $message->chat->id;
@@ -112,7 +112,7 @@ $chat_edit_id = $update->edited_message->chat->id;
 $edit_for_id = $update->edited_message->from->id;
 $edit_chatid = $update->callback_query->edited_message->chat->id;
 $caption = $update->message->caption;
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $message = $update->message;
 $chat_id = $update->message->chat->id;
 $from_id = $update->message->from->id;

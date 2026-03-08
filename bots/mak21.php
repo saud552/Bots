@@ -10,7 +10,7 @@ $start="
 1997/6/28 .
 ";}
 
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $fromid= $update->callback_query->from->id;
 $username = $update->message->from->username;
 $message = $update->message;

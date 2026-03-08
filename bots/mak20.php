@@ -253,7 +253,7 @@ unlink("data/stor/start/$from_id.json");
 bot("sendMessage",[
 "chat_id"=>$chat_id,
 "text"=>"تم حذف إعلان قيد الإنشاء",
-'parse_mode'=>MarkDown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true
 ,'reply_markup'=>json_encode([
              'remove_keyboard'=>true
@@ -275,7 +275,7 @@ $startmod = "link";
 bot("sendMessage",[
 "chat_id"=>$chat_id,
 "text"=>"تم الرجوع",
-'parse_mode'=>MarkDown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true
 ,'reply_markup'=>json_encode([
              'remove_keyboard'=>true
@@ -302,13 +302,13 @@ bot("editmessagetext",[
 "text"=>"💾 ✅ تمّ حفظ الكود \n مفتاح الكود :
  `@$usernamebot $u00`",
 "message_id"=>$message_id,
-'parse_mode'=>MarkDown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true
 ]);
 bot("sendMessage",[
 "chat_id"=>$chat_id,
 "text"=>"💾 ✅ تمّ حفظ الإعلان",
-'parse_mode'=>MarkDown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true
 ,'reply_markup'=>json_encode([
              'remove_keyboard'=>true
@@ -337,7 +337,7 @@ if(isset($list)){
 bot("sendMessage",[
 "chat_id"=>$mkchat,
 "text"=>"$getfile_id",
-"parse_mode"=>MarkDown,
+"parse_mode"=>'markdown',
 "disable_web_page_preview"=>true,
 "reply_markup"=>$list
 ]);}
@@ -345,7 +345,7 @@ else {
  $get=bot("sendMessage",[
 "chat_id"=>$mkchat,
 "text"=>"$getfile_id",
-'parse_mode'=>MarkDown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true
 ]);
 }
@@ -355,7 +355,7 @@ else{
 
 $gs2 = file_get_contents("data/stor/code/$ch.php");
 $u=$u."_".$u;
-file_put_contents("data/stor/tg1/$u.php", '<?php'."\n".'$link = "'.$link.'";'.$gs2.''."\n".'bot("answerInlineQuery",[ "inline_query_id"=>$update->inline_query->id, "cache_time"=>"'.$message_id.'", "results"=>json_encode([[ "type"=>"'.$ss.'", "id"=>base64_encode(rand(5,555)), "'.$ss.'_file_id"=>"'.$getfile_id.'", "thumb_url"=>"'.$getfile_id.'","parse_mode"=>MarkDown, "caption"=>"'.$getfull.'", "reply_markup"=>[ "inline_keyboard"=>$listp ]]])]);'."\n");
+file_put_contents("data/stor/tg1/$u.php", '<?php'."\n".'$link = "'.$link.'";'.$gs2.''."\n".'bot("answerInlineQuery",[ "inline_query_id"=>$update->inline_query->id, "cache_time"=>"'.$message_id.'", "results"=>json_encode([[ "type"=>"'.$ss.'", "id"=>base64_encode(rand(5,555)), "'.$ss.'_file_id"=>"'.$getfile_id.'", "thumb_url"=>"'.$getfile_id.'","parse_mode"=>'markdown', "caption"=>"'.$getfull.'", "reply_markup"=>[ "inline_keyboard"=>$listp ]]])]);'."\n");
 if(in_array($from_id,$sudo))
 {
 
@@ -364,7 +364,7 @@ if(isset($list)){
 "chat_id"=>$mkchat,
 "$ss"=>"$getfile_id",
 'caption'=>"$getfull",
-'parse_mode'=>html,
+'parse_mode'=>'html',
 "reply_markup"=>$list
 ]);
 }
@@ -373,7 +373,7 @@ $get=bot($sens,[
 "chat_id"=>$mkchat,
 "$ss"=>"$getfile_id",
 'caption'=>"$getfull",
-'parse_mode'=>html
+'parse_mode'=>'html'
 ]);
 }}}
 
@@ -445,7 +445,7 @@ bot('editmessagetext',[
     'chat_id'=>$chat_id,
     'text'=>"كَيف تُرِيد شَرح البُوت ؟",
 "message_id"=>$message_id,
-"parse_mode"=>MarkDown,
+"parse_mode"=>'markdown',
 'reply_markup'=>json_encode([
 'inline_keyboard'=>[
 [['text'=>"شَرْح نَصِّ 📚 .",'callback_data'=>"info1"]],
@@ -464,7 +464,7 @@ bot("editmessagetext",[
 تصفح في القناة ، واختار كود مناسب لك ثم اضغط على زر [ اضغط هنا لصنع كود ] وقم بأرسال رابط قناتك ، رابط وليس يوزر ! وسيتم صنع اعلان لك بكل سهولة 💯 .
 ",
 "message_id"=>$message_id,
-'parse_mode'=>MarkDown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 'reply_markup'=>json_encode([
 'inline_keyboard'=>[
@@ -497,7 +497,7 @@ file_put_contents("data/stor/from/$u.php",'<?php $link ="'.$link.'" ;'."\n".' '.
 "chat_id"=>$chat_id,
 "text"=>"'.$getfile_id.'",
 "message_id"=>$message_id,
-"parse_mode"=>markdown,
+"parse_mode"=>'markdown',
 "disable_web_page_preview"=>true,
 "reply_markup"=>json_encode([ "inline_keyboard"=>$listp])]);');
 include "data/stor/from/$u.php";
@@ -511,7 +511,7 @@ $co1=$co+1;
 $co1=$u."_".$co1;
 
 $gs2 = file_get_contents("data/stor/code/$u.php");
-file_put_contents("data/stor/tg1/$co1.php", '<?php'."\n".'$link = "'.$text.'";'.$gs2.''."\n".'bot("answerInlineQuery",[ "inline_query_id"=>$update->inline_query->id, "cache_time"=>"'.$message_id.'", "results"=>json_encode([[ "type"=>"'.$ss.'", "id"=>base64_encode(rand(5,555)), "'.$ss.'_file_id"=>"'.$getfile_id.'", "thumb_url"=>"'.$getfile_id.'","parse_mode"=>MarkDown, "caption"=>"'.$getfull.'", "reply_markup"=>[ "inline_keyboard"=>$listp ]]])]);'."\n");
+file_put_contents("data/stor/tg1/$co1.php", '<?php'."\n".'$link = "'.$text.'";'.$gs2.''."\n".'bot("answerInlineQuery",[ "inline_query_id"=>$update->inline_query->id, "cache_time"=>"'.$message_id.'", "results"=>json_encode([[ "type"=>"'.$ss.'", "id"=>base64_encode(rand(5,555)), "'.$ss.'_file_id"=>"'.$getfile_id.'", "thumb_url"=>"'.$getfile_id.'","parse_mode"=>'markdown', "caption"=>"'.$getfull.'", "reply_markup"=>[ "inline_keyboard"=>$listp ]]])]);'."\n");
 
 $link = re_n1($from_id,"link");
 $gs2 = file_get_contents("data/stor/code/$u.php");
@@ -519,7 +519,7 @@ file_put_contents("data/stor/from/$u.php",'<?php $link ="'.$link.'" ;'."\n".' '.
 "chat_id"=>$chat_id,
 "$ss"=>"'.$getfile_id.'",
 "caption"=>"'.$getfull.'",
-"parse_mode"=>MarkDown,
+"parse_mode"=>'markdown',
 "reply_markup"=> json_encode([ "inline_keyboard"=>$listp])]);');
 include "data/stor/from/$u.php";
 unlink("data/stor/from/$u.php");
@@ -527,7 +527,7 @@ unlink("data/stor/from/$u.php");
 bot('sendMessage',[
     'chat_id'=>$chat_id,
     'text'=>"`@$usernamebot $co1`",
-"parse_mode"=>MarkDown,
+"parse_mode"=>'markdown',
 'reply_markup'=>json_encode([
 'inline_keyboard'=>[
 [['text'=>"مُشارَكَة الإِعلَان 📮 ",'switch_inline_query'=>"$co1"]],
@@ -557,7 +557,7 @@ file_put_contents("data/stor/from/$u.php",'<?php $link ="'.$link.'" ; '."\n".'bo
 "chat_id"=>$chat_id,
 "text"=>"'.$getfile_id.'",
 "message_id"=>$message_id,
-"parse_mode"=>markdown,
+"parse_mode"=>'markdown',
 "disable_web_page_preview"=>true]);');
 include "data/stor/from/$u.php";
 unlink("data/stor/from/$u.php");
@@ -565,7 +565,7 @@ unlink("data/stor/from/$u.php");
 bot('sendMessage',[
     'chat_id'=>$chat_id,
     'text'=>"`@$usernamebot $co1`",
-"parse_mode"=>MarkDown,
+"parse_mode"=>'markdown',
 'reply_markup'=>json_encode([
 'inline_keyboard'=>[
 [['text'=>"مُشارَكَة الإِعلَان 📮 ",'switch_inline_query'=>"$co1"]],
@@ -590,7 +590,7 @@ bot('sendMessage',[
     'chat_id'=>$chat_id,
     'text'=>" هَل تُرِيد عَرَض الْإِزَرار فِي الكُود الْخَاصّ فِيك ؟ ،
 ▪️الاعِلان : ".$getfile_id,
-"parse_mode"=>markdown,
+"parse_mode"=>'markdown',
 "disable_web_page_preview"=>true,
 'reply_markup'=>json_encode([
 'inline_keyboard'=>[
@@ -603,7 +603,7 @@ else {
 bot('sendMessage',[
     'chat_id'=>$chat_id,
     'text'=>"هَل تُرِيد عَرَض الْإِزَار فِي الكود الْخَاصّ فِيك ؟",
-"parse_mode"=>markdown,
+"parse_mode"=>'markdown',
 "disable_web_page_preview"=>true,
 'reply_markup'=>json_encode([
 'inline_keyboard'=>[
@@ -667,7 +667,7 @@ unlink("data/stor/start/l$from_id.txt");
 bot("editmessagetext",[
 "chat_id"=>$chat_id,
 "text"=>"- تَمّ إلغَاء صَنَع الكَوّد ، لِطَلَب كَوّد جَدِيد أدخَل إلَى القَنَاة ، بَعدَهَا حَدّد طَلَبُك مِنْ جَدِيد 🆕 .",
-'parse_mode'=>MarkDown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode([
@@ -685,7 +685,7 @@ bot("sendMessage",[
 "chat_id"=>$chat_id,
 "text"=>"🔗 الآنـ أرسِل الرّابط الذي تريد إضافتُه فِي الإعلان
 مِثال: `https://t.me/$us`",
-'parse_mode'=>MarkDown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true
 ]);
 }
@@ -700,7 +700,7 @@ bot("sendMessage",[
 "text"=>"🔗 تمّ إختيارُ الرّابط:
 ".$text."
 للرجوع أرسل: #رجوع",
-'parse_mode'=>MarkDown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true
 ,'reply_markup'=>json_encode([
              'keyboard'=>[
@@ -793,13 +793,13 @@ bot($sens,[
 "chat_id"=>$chat_id,
 "$ss"=>"$getfile_id",
 'caption'=>"$getfull",
-'parse_mode'=>html
+'parse_mode'=>'html'
 ]);
 bot("sendMessage",[
 "chat_id"=>$chat_id,
 "text"=>"✅ تم إنشاء الإعلان، هل تريد حفظه ؟
 ⛔️ أرسل #حذف لِحذف الإعلانـ، أرسل #رجوع للرجوع.",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'reply_markup'=>json_encode([
 'inline_keyboard'=>[
 [['text'=>"اضافة ازرار",'callback_data'=>"gooo"],
@@ -838,13 +838,13 @@ bot("sendphoto",[
 "chat_id"=>$chat_id,
 "photo"=>"$file_id",
 'caption'=>"$caption",
-'parse_mode'=>html
+'parse_mode'=>'html'
 ]);
 bot("sendMessage",[
 "chat_id"=>$chat_id,
 "text"=>"✅ تم إنشاء الإعلان، هل تريد حفظه ؟
 ⛔️ أرسل #حذف لِحذف الإعلانـ، أرسل #رجوع للرجوع.",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'reply_markup'=>json_encode([
 'inline_keyboard'=>[
 [['text'=>"اضافة ازرار",'callback_data'=>"gooo"],
@@ -861,13 +861,13 @@ bot("senddocument",[
 "chat_id"=>$chat_id,
 "document"=>"$file_id",
 'caption'=>"$caption",
-'parse_mode'=>html
+'parse_mode'=>'html'
 ]);
 bot("sendMessage",[
 "chat_id"=>$chat_id,
 "text"=>"✅ تم إنشاء الإعلان، هل تريد حفظه ؟
 ⛔️ أرسل #حذف لِحذف الإعلانـ، أرسل #رجوع للرجوع.",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'reply_markup'=>json_encode([
 'inline_keyboard'=>[
 [['text'=>"اضافة ازرار",'callback_data'=>"gooo"],
@@ -885,13 +885,13 @@ bot("sendsticker",[
 "chat_id"=>$chat_id,
 "sticker"=>"$file_id",
 'caption'=>"$caption",
-'parse_mode'=>html
+'parse_mode'=>'html'
 ]);
 bot("sendMessage",[
 "chat_id"=>$chat_id,
 "text"=>"✅ تم إنشاء الإعلان، هل تريد حفظه ؟
 ⛔️ أرسل #حذف لِحذف الإعلانـ، أرسل #رجوع للرجوع.",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'reply_markup'=>json_encode([
 'inline_keyboard'=>[
 [['text'=>"اضافة ازرار",'callback_data'=>"gooo"],
@@ -909,13 +909,13 @@ bot("sendvoice",[
 "chat_id"=>$chat_id,
 "voice"=>"$file_id",
 'caption'=>"$caption",
-'parse_mode'=>html
+'parse_mode'=>'html'
 ]);
 bot("sendMessage",[
 "chat_id"=>$chat_id,
 "text"=>"✅ تم إنشاء الإعلان، هل تريد حفظه ؟
 ⛔️ أرسل #حذف لِحذف الإعلانـ، أرسل #رجوع للرجوع.",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'reply_markup'=>json_encode([
 'inline_keyboard'=>[
 [['text'=>"اضافة ازرار",'callback_data'=>"gooo"],
@@ -932,13 +932,13 @@ bot("sendaudio",[
 "chat_id"=>$chat_id,
 "audio"=>"$file_id",
 'caption'=>"$caption",
-'parse_mode'=>html
+'parse_mode'=>'html'
 ]);
 bot("sendMessage",[
 "chat_id"=>$chat_id,
 "text"=>"✅ تم إنشاء الإعلان، هل تريد حفظه ؟
 ⛔️ أرسل #حذف لِحذف الإعلانـ، أرسل #رجوع للرجوع.",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'reply_markup'=>json_encode([
 'inline_keyboard'=>[
 [['text'=>"اضافة ازرار",'callback_data'=>"gooo"],
@@ -956,13 +956,13 @@ bot("sendvideo",[
 "chat_id"=>$chat_id,
 "video"=>"$file_id",
 'caption'=>"$caption",
-'parse_mode'=>html
+'parse_mode'=>'html'
 ]);
 bot("sendMessage",[
 "chat_id"=>$chat_id,
 "text"=>"✅ تم إنشاء الإعلان، هل تريد حفظه ؟
 ⛔️ أرسل #حذف لِحذف الإعلانـ، أرسل #رجوع للرجوع.",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'reply_markup'=>json_encode([
 'inline_keyboard'=>[
 [['text'=>"اضافة ازرار",'callback_data'=>"gooo"],
@@ -1022,7 +1022,7 @@ if($sens == "sendMessage"){
 file_put_contents("data/stor/tg/$countsend1.php", "\n".'bot("sendMessage",[
 "chat_id"=>$chat_id,
 "text"=>"'.$getfile_id.'",
-"parse_mode"=>MarkDown,
+"parse_mode"=>'markdown',
 "disable_web_page_preview"=>true,
 "reply_markup"=>$list5
 ]);', FILE_APPEND);
@@ -1030,7 +1030,7 @@ file_put_contents("data/stor/tg/$countsend1.php", "\n".'bot("sendMessage",[
 bot("sendMessage",[
 "chat_id"=>$chat_id,
 "text"=>"$getfile_id",
-"parse_mode"=>MarkDown,
+"parse_mode"=>'markdown',
 "disable_web_page_preview"=>true,
 "reply_markup"=>$list5
 ]);
@@ -1042,7 +1042,7 @@ bot($sens,[
 "chat_id"=>$chat_id,
 "$ss"=>"$getfile_id",
 'caption'=>"$getfull",
-'parse_mode'=>html,
+'parse_mode'=>'html',
 "reply_markup"=>$list5
 ]);
 }
@@ -1050,7 +1050,7 @@ bot("sendMessage",[
 "chat_id"=>$chat_id,
 "text"=>"✅ تم إنشاء الإعلان، هل تريد حفظه ؟
 ⛔️ أرسل #حذف لِحذف الإعلانـ، أرسل #رجوع للرجوع.",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'reply_markup'=>json_encode([
 'inline_keyboard'=>[
 [['text'=>"💾 حفظ",'callback_data'=>"seve"]]

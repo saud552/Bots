@@ -49,7 +49,7 @@ bot('EditMessageText',[
 
 - قناة النشر : $channelpost
 ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode([

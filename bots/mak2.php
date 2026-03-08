@@ -2,7 +2,7 @@
 
 $sudo = "$admin";
 $sudo1 = array("$sudo");
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $message = $update->message;
 $from_id = $message->from->id;
 $chat_id = $message->chat->id;

@@ -66,7 +66,7 @@ bot('sendmessage',[
 
 - يمكنك التحكم بواسطه الازرار ❤️
  ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -109,7 +109,7 @@ bot('EditMessageText',[
 
 - يمكنك التحكم بواسطه الازرار ❤️
 ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -148,7 +148,7 @@ bot('EditMessageText',[
 'chat_id'=>$chat_id, 
 'text'=>"- قم بإرسال الحقوق
 ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[

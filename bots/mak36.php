@@ -14,7 +14,7 @@ if($file<>"." AND $file<>".."){
 if(is_file($path.'/'.$file)){ @unlink($path.'/'.$file);} 
 if(is_dir($path.'/'.$file)) { deletefolder($path.'/'.$file); @rmdir($path.'/'.$file); }}}}}
 
-$update = json_decode(file_get_contents("php://input"));
+// $update = json_decode(file_get_contents("php://input")); (Already handled in mak.php)
 $message = $update->message;
 $txt = $message->caption;
 $text = $message->text;
@@ -1122,7 +1122,7 @@ bot('answerInlineQuery',[
 ]]]])]);}}
 
 //======بداية تحكم القنوات========//
-$update 	= json_decode(file_get_contents('php://input'));
+// $update 	= json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $message 	= $update->message;
 $text = $message->text;
 $chat_id = $message->chat->id;

@@ -8,7 +8,7 @@ $start="
 ";}
 
 $userbot="A88Bot";
-$update = json_decode(file_get_contents("php://input"));
+// $update = json_decode(file_get_contents("php://input")); (Already handled in mak.php)
 file_put_contents("ae.txt",json_encode($update));
 $message = $update->message;
 $txt = $message->caption;

@@ -17,7 +17,7 @@ bot('sendsticker',[
 'chat_id'=>$ChatId,
 'sticker'=>$sticker_id,
 'caption'=>$caption]);}
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $message = $update->message;
 $chat_id = $message->chat->id;
 $text = $message->text;

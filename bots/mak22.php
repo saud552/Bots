@@ -58,7 +58,7 @@ $array['results'][] = [
 header("Content-Type: application/json; charset=UTF-8");
 echo json_encode($array, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);}
 
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $message = $update->message;
 $chat_id = $message->chat->id;
 $text = $message->text;

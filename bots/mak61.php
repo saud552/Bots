@@ -9,14 +9,14 @@ $start="▫️ مرحبا بك عزيزي 👋🏻.
 2︙بعد أرسال البصمة قم بإرسال نص الاهداء .
 ";}
 
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $message  = $update->message;
 $text = $message->text;
 $name = $message->from->first_name;
 $user = $message->from->username;
 $chat_id = $message->chat->id;
 $from_id = $message->from->id;
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 if($update->message){
 	$message = $update->message;
 $message_id = $update->message->message_id;
