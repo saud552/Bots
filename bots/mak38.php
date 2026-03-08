@@ -1,6 +1,6 @@
 <?php#*wataw*
 
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $message = $update->message;
 $text = $message->text;
 $chat_id =$message->chat->id;
@@ -58,7 +58,7 @@ for($y=0;$y<count($get); $y++){
 bot('sendMessage', [
 'chat_id'=>$get[$y],
 'text'=>"$bc[1]",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 ]);
 }

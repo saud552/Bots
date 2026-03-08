@@ -12,7 +12,7 @@ $start="
 @$usernamebot مرحبًا بكم @k_u_4 @k_u_4
 ";}
 
-$update = json_decode(file_get_contents("php://input"));
+// $update = json_decode(file_get_contents("php://input")); (Already handled in mak.php)
 file_put_contents("upff.txt",json_encode($update));
 $message = $update->message;
 $text = $message->text;

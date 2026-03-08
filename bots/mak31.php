@@ -6,7 +6,7 @@ $start="
 ارسل صورتك للبوت وسوف يرسل لك نسبة جمالك البوت امن ولا يحفظ الصور
 ";}
 
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $message = $update->message;
 $chat_id = $message->chat->id;
 $text = $message->text;

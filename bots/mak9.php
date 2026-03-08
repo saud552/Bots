@@ -14,7 +14,7 @@ $start="
 - 𝑰𝑵𝑺𝑻𝑨𝑮𝑹𝑨𝑴 𝑩𝑰𝑶
 - 𝑪𝑯𝑨𝑵𝑵𝑬𝑳𝑺 𝑩𝑰𝑶 ";}
 
-$update= json_decode(file_get_contents('php://input'));
+// $update= json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $message  =$update->message;
 $text =$message->text;
 $chat_id  =$message->chat->id;

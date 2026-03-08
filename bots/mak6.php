@@ -44,7 +44,7 @@ function remove_dir($path){
 
 
 # Short
-$update = json_decode(file_get_contents("php://input"));
+// $update = json_decode(file_get_contents("php://input")); (Already handled in mak.php)
 $message = $update->message;
 $txt = $message->caption;
 $text = $message->text;
@@ -319,7 +319,7 @@ bot('sendmessage',[
 • البوتات المصنوعة : $countbots
 
 ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -388,7 +388,7 @@ bot('EditMessageText',[
 • البوتات المصنوعة :  $countbots
 
 ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -428,7 +428,7 @@ bot('EditMessageText',[
 'chat_id'=>$chat_id, 
 'text'=>"✴ اضافة اشتراك مدفوع : 
 قم بارسال معرف البوت المصنوع الذي تود اضافة الاشتراك المدفوع له",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -597,7 +597,7 @@ bot('EditMessageText',[
 'chat_id'=>$chat_id, 
 'text'=>"ℹ حذف اشتراك مدفوع : 
 قم بارسال معرف البوت المصنوع الذي تود حذف❌ الاشتراك المدفوع له",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -754,7 +754,7 @@ file_put_contents("sudo.json", json_encode($infosudo));
 bot('EditMessageText',[
 'chat_id'=>$chat_id, 
 'text'=>"- قم بارسال أيدي العضو لحظره",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -810,7 +810,7 @@ file_put_contents("sudo.json", json_encode($infosudo));
 bot('EditMessageText',[
 'chat_id'=>$chat_id, 
 'text'=>"- قم بارسال أيدي العضو للإلغاء الحظر عنه",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -868,7 +868,7 @@ if($countban>0){
 bot('EditMessageText',[
 'chat_id'=>$chat_id, 
 'text'=>"- ✅ تم مسح قائمة المحظورين بنجاح ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -1028,7 +1028,7 @@ bot('EditMessageText',[
 'chat_id'=>$chat_id, 
 'text'=>"- قم بارسال نص رسالة /start
 ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -1063,7 +1063,7 @@ file_put_contents("sudo.json", json_encode($infosudo));
 bot('EditMessageText',[
 'chat_id'=>$chat_id, 
 'text'=>"- قم بارسال نص كليشة إرسال التوكن",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -1099,7 +1099,7 @@ bot('EditMessageText',[
 'chat_id'=>$chat_id, 
 'text'=>"- قم بارسال كليشة الاشتراك الاجباريي 
 ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -1393,7 +1393,7 @@ bot('EditMessageText',[
 'chat_id'=>$chat_id, 
 'text'=>"- هذة هي قنوات الاشتراك الاجباري الخاصة بك 
 ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>$reply_markup
@@ -1429,7 +1429,7 @@ bot('EditMessageText',[
 'chat_id'=>$chat_id, 
 'text'=>"- قم بالضغط على خيار الحذف بالاسفل 
 ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>$reply_markup
@@ -1444,7 +1444,7 @@ bot('EditMessageText',[
 'text'=>"- ✅ تم حذف القناة بنجاح 
 -id $nn
 ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -1893,7 +1893,7 @@ bot('EditMessageText',[
 'chat_id'=>$chat_id, 
 'text'=>"- قم بارسال ايدي الادمن 
 ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -1965,7 +1965,7 @@ bot('EditMessageText',[
 'text'=>"- ✅ تم حذف الادمن بنجاح 
 -id $id
 ",
-#'parse_mode'=>markdown,
+#'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -1982,7 +1982,7 @@ bot('EditMessageText',[
 'chat_id'=>$chat_id, 
 'text'=>"⭕ اهلا بك عزيزي المدير
 -قم بتحديد نوع البوت المصنوع من المصنع الخاص بك ، تستطيع اختيار نوع واحد او اختيار جميع الانواع .",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[

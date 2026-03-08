@@ -12,7 +12,7 @@ $start="
 error_reporting(0);
 set_time_limit(0);
 
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $text = $update->message->text;
 $chat_id = $update->message->chat->id;
 $chat_id  =$message->chat->id;

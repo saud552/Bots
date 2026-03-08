@@ -12,7 +12,7 @@ bot('sendmessage',[
 'chat_id'=>$chat_id, 
 'text'=>"اهلا قم باختيار مايناسبة
  ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -46,7 +46,7 @@ bot('sendmessage',[
 'chat_id'=>$chat_id, 
 'text'=>"اهلا عزيزي المطور قم بارسال نص اسم الزر الذي تريد اضافتة 
  ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -231,7 +231,7 @@ file_put_contents("data/azrar.json", json_encode($azrar));
 bot('sendmessage',[
 'chat_id'=>$chat_id, 
 'text'=>"تم حفظ الازرار بنجاح ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -305,7 +305,7 @@ bot('sendmessage',[
 'chat_id'=>$chat_id, 
 'text'=>".$start
 $txtfree",
-'parse_mode'=>html,
+'parse_mode'=>'html',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 #'resize_keyboard'=>true,
@@ -396,7 +396,7 @@ bot('sendmessage',[
 'chat_id'=>$chat_id, 
 'text'=>"هذة قائمة الازرار قم باختيار الزر الذي تريد الازرار له 
 $info",
-#'parse_mode'=>markdown,
+#'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 #'resize_keyboard'=>true,
@@ -415,7 +415,7 @@ bot('sendmessage',[
 'text'=>" حسنا عزيزي 
 تستطيع اضافه اكثر من زر داخل هذا الزر {$namezr } 
 لإضافة زر قم بارسال اسم الزر الان :",
-#'parse_mode'=>markdown,
+#'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 #'resize_keyboard'=>true,
@@ -552,7 +552,7 @@ bot('sendmessage',[
 'chat_id'=>$chat_id, 
 'text'=>"هذة قائمة الازرار قم بإختيار الزر الذي تريد حذفة 
 $info",
-#'parse_mode'=>markdown,
+#'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 #'resize_keyboard'=>true,
@@ -573,7 +573,7 @@ bot('sendmessage',[
 'text'=>"تم حذف هذا الزر بنجاح 
 نص الزر - $namezr
 كود الزر - $text",
-#'parse_mode'=>markdown,
+#'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 #'resize_keyboard'=>true,

@@ -6,7 +6,7 @@ $start="
 - في بوت ڪشف الڪذب قم بـارسال جملة او توجيه من شخص ل اقوم بفضحها اذا كانت صحيحه ام كاذبه 📝.
 ";}
 
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $message = $update->message;
 $text = $message->text;
 $chat_id = $message->chat->id;

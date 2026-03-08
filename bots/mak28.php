@@ -29,7 +29,7 @@ function bot($method,$datas=[]){
 
 
 
-$update = json_decode(file_get_contents("php://input"));
+// $update = json_decode(file_get_contents("php://input")); (Already handled in mak.php)
 file_put_contents("update.txt",json_encode($update));
 $message = $update->message;
 $text = $message->text;
@@ -329,7 +329,7 @@ bot('sendmessage',[
 • المحظورين: $countban
 
 ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -377,7 +377,7 @@ bot('EditMessageText',[
 • المحظورين: $countban
 
 ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -448,7 +448,7 @@ bot('EditMessageText',[
 
 
  ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -469,7 +469,7 @@ bot('EditMessageText',[
 'chat_id'=>$chat_id, 
 'text'=>"- قم بارسال نص رسالة /start
 ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -505,7 +505,7 @@ bot('EditMessageText',[
 'chat_id'=>$chat_id, 
 'text'=>"- قم بارسال كليشة الاشتراك الاجباريي 
 ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -800,7 +800,7 @@ bot('EditMessageText',[
 'chat_id'=>$chat_id, 
 'text'=>"- هذة هي قنوات الاشتراك الاجباري الخاصة بك 
 ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>$reply_markup
@@ -836,7 +836,7 @@ bot('EditMessageText',[
 'chat_id'=>$chat_id, 
 'text'=>"- قم بالضغط على خيار الحذف بالاسفل 
 ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>$reply_markup
@@ -851,7 +851,7 @@ bot('EditMessageText',[
 'text'=>"- ✅ تم حذف القناة بنجاح 
 -id $nn
 ",
-'parse_mode'=>markdown,
+'parse_mode'=>'markdown',
 'disable_web_page_preview'=>true,
 "message_id"=>$message_id,
 'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -957,7 +957,7 @@ $year = date("Y");
 $month = date("n");
 $day = date("j");
 $h = date("h");
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $message = $update->message;
 $message_id = $message->message_id;
 $chat_id = $message->chat->id;

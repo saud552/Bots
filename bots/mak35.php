@@ -42,7 +42,7 @@ return true;
 }else {
 return false;}}}
 
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $message = $update->message;
 $text = $message->text;
 $sudo = $admin;

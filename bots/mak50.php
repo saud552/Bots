@@ -18,7 +18,7 @@ $ch = curl_init();
     }
 }
 $Dev = array("1956402839","1");
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 $message = $update->message;
 $chat_id = $message->chat->id;
 $text = $update->message->text;
@@ -1328,7 +1328,7 @@ $start="
 ⚙️꒐ وارسل تفعيل ومن ثم الاوامر
 ";}
 
-$update = json_decode(file_get_contents('php://input'));
+// $update = json_decode(file_get_contents('php://input')); (Already handled in mak.php)
 if($update->message){
 	$message = $update->message;
 $message_id = $update->message->message_id;
